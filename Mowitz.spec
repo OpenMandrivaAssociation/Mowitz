@@ -13,6 +13,8 @@ Version:   %{version}
 Release:   %{release}
 URL:       http://siag.nu/mowitz/
 Source:    http://siag.nu/pub/mowitz/%{name}-%{version}.tar.bz2
+Patch0:    Mowitz-0.3.0-overflow.patch
+Patch1:    Mowitz-0.3.0-overflow2.patch
 License:   GPL
 Group:     System/Libraries
 BuildRoot: %{_tmppath}/%{name}-buildroot
@@ -45,6 +47,8 @@ to use. It complements a widget set such as Xaw3d or neXtaw.
 rm -rf $RPM_BUILD_ROOT
 
 %setup -q
+%patch0 -p0 -b .overflow
+%patch1 -p0 -b .overflow2
 
 %build
 
