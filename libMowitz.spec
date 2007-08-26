@@ -1,6 +1,6 @@
 %define name Mowitz
 %define version 0.3.0
-%define release %mkrel 3
+%define release %mkrel 4
 
 %define major 0
 %define libname %mklibname %{name} %major
@@ -17,7 +17,7 @@ License:   GPL
 Group:     System/Libraries
 BuildRoot: %{_tmppath}/%{name}-buildroot
 Buildrequires: libXawM-devel XFree86-devel libxpm-devel  
-Buildrequires: libneXtaw-devel glibc-static-devel
+Buildrequires: libneXtaw-devel glibc-static-devel autoconf2.5
 
 %description
 The Mowitz library contains a large collection of widgets for X applications 
@@ -48,7 +48,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %build
 
-%configure
+%configure2_5x
 
 %make
 
