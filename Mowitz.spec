@@ -1,6 +1,6 @@
 %define name Mowitz
 %define version 0.3.0
-%define release %mkrel 6
+%define release %mkrel 7
 
 %define major 0
 %define libname %mklibname %{name} %major
