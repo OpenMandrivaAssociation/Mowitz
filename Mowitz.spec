@@ -1,6 +1,6 @@
 %define name Mowitz
 %define version 0.3.0
-%define release %mkrel 5
+%define release %mkrel 6
 
 %define major 0
 %define libname %mklibname %{name} %major
@@ -16,6 +16,8 @@ Source:    http://siag.nu/pub/mowitz/%{name}-%{version}.tar.bz2
 Patch0:    Mowitz-0.3.0-overflow.patch
 Patch1:    Mowitz-0.3.0-overflow2.patch
 Patch2:    Mowitz-0.3.0-overflow3.patch
+Patch3:    Mowitz-0.3.0-overflow4.patch
+Patch4:    Mowitz-0.3.0-overflow5.patch
 License:   GPL
 Group:     System/Libraries
 BuildRoot: %{_tmppath}/%{name}-buildroot
@@ -51,6 +53,8 @@ rm -rf $RPM_BUILD_ROOT
 %patch0 -p0 -b .overflow
 %patch1 -p0 -b .overflow2
 %patch2 -p0 -b .overflow3
+%patch3 -p0 -b .overflow4
+%patch4 -p0 -b .overflow5
 
 %build
 
