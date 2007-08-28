@@ -19,6 +19,8 @@ Patch2:    Mowitz-0.3.0-overflow3.patch
 Patch3:    Mowitz-0.3.0-overflow4.patch
 Patch4:    Mowitz-0.3.0-overflow5.patch
 Patch5:    Mowitz-0.3.0-overflow6.patch
+Patch6:    Mowitz-0.3.0-overflow7.patch
+Patch7:    Mowitz-0.3.0-overflow8.patch
 License:   GPL
 Group:     System/Libraries
 BuildRoot: %{_tmppath}/%{name}-buildroot
@@ -57,6 +59,8 @@ rm -rf $RPM_BUILD_ROOT
 %patch3 -p0 -b .overflow4
 %patch4 -p0 -b .overflow5
 %patch5 -p0 -b .overflow6
+%patch6 -p0 -b .overflow7
+%patch7 -p0 -b .overflow8
 
 %build
 
