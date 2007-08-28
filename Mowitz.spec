@@ -1,6 +1,6 @@
 %define name Mowitz
 %define version 0.3.0
-%define release %mkrel 7
+%define release %mkrel 8
 
 %define major 0
 %define libname %mklibname %{name} %major
@@ -18,6 +18,7 @@ Patch1:    Mowitz-0.3.0-overflow2.patch
 Patch2:    Mowitz-0.3.0-overflow3.patch
 Patch3:    Mowitz-0.3.0-overflow4.patch
 Patch4:    Mowitz-0.3.0-overflow5.patch
+Patch5:    Mowitz-0.3.0-overflow6.patch
 License:   GPL
 Group:     System/Libraries
 BuildRoot: %{_tmppath}/%{name}-buildroot
@@ -55,6 +56,7 @@ rm -rf $RPM_BUILD_ROOT
 %patch2 -p0 -b .overflow3
 %patch3 -p0 -b .overflow4
 %patch4 -p0 -b .overflow5
+%patch5 -p0 -b .overflow6
 
 %build
 
