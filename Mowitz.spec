@@ -23,6 +23,7 @@ Patch6:    Mowitz-0.3.0-overflow7.patch
 Patch7:    Mowitz-0.3.0-overflow8.patch
 License:   GPL
 Group:     System/Libraries
+BuildRoot: %{_tmppath}/%{name}-buildroot
 Buildrequires: libXawM-devel X11-devel libxpm-devel  
 Buildrequires: libneXtaw-devel glibc-static-devel autoconf2.5
 
