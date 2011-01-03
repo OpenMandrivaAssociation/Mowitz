@@ -4,8 +4,7 @@
 
 %define major 0
 %define libname %mklibname %{name} %major
-%define libnamedev %mklibname %{name} %major -d
-
+%define libnamedev %mklibname %{name} -d
 
 Summary:   Collection of widgets for X applications
 Name:      %{name}
@@ -21,11 +20,17 @@ Patch4:    Mowitz-0.3.0-overflow5.patch
 Patch5:    Mowitz-0.3.0-overflow6.patch
 Patch6:    Mowitz-0.3.0-overflow7.patch
 Patch7:    Mowitz-0.3.0-overflow8.patch
+Patch8:    Mowitz-0.3.0-link.patch
 License:   GPL
 Group:     System/Libraries
 BuildRoot: %{_tmppath}/%{name}-buildroot
-Buildrequires: libXawM-devel X11-devel libxpm-devel  
-Buildrequires: libneXtaw-devel glibc-static-devel autoconf2.5
+BuildRequires: libx11-devel
+BuildRequires: libxpm-devel
+BuildRequires: libxext-devel
+BuildRequires: libxaw-devel
+BUildRequires: libxmu-devel
+BUildRequires: libxt-devel
+BuildRequires: libneXtaw-devel
 
 %description
 The Mowitz library contains a large collection of widgets for X applications 
@@ -42,16 +47,15 @@ to use. It complements a widget set such as Xaw3d or neXtaw.
 %package -n %{libnamedev}
 Summary:  Collection of widgets for X applications
 Group:    Development/C
-Requires: %{libname} = %{version}
-Provides: libMowitz-devel
+Requires: %{libname} = %{version}-%{release}
+Provides: libMowitz-devel = %{version}-%{release}
+Obsoletes: %{_lib}Mowitz0-devel
 
 %description -n %{libnamedev}
 The Mowitz library contains a large collection of widgets for X applications
 to use. It complements a widget set such as Xaw3d or neXtaw.
 
 %prep
-rm -rf $RPM_BUILD_ROOT
-
 %setup -q
 %patch0 -p0 -b .overflow
 %patch1 -p0 -b .overflow2
@@ -61,16 +65,15 @@ rm -rf $RPM_BUILD_ROOT
 %patch5 -p0 -b .overflow6
 %patch6 -p0 -b .overflow7
 %patch7 -p0 -b .overflow8
+%patch8 -p0 -b .link
 
 %build
-
 %configure2_5x
-
 %make
 
 %install
-
-%makeinstall
+rm -fr %buildroot
+%makeinstall_std
 
 %multiarch_binaries $RPM_BUILD_ROOT%{_bindir}/mowitz-config
 
