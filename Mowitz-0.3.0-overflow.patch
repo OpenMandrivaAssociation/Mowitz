@@ -1,0 +1,11 @@
+--- Mowitz/MwXFormat.c~	2003-01-16 21:31:27.000000000 +0100
++++ Mowitz/MwXFormat.c	2007-08-26 09:45:02.000000000 +0200
+@@ -490,7 +490,7 @@
+ 		if (!strcmp(loaded_fonts[i].name, result))
+ 			return loaded_fonts[i].fs;
+ 	}
+-	loaded_fonts = MwRealloc(loaded_fonts, (i+1)*sizeof(*loaded_fonts));
++	loaded_fonts = MwRealloc(loaded_fonts, (i+2)*sizeof(*loaded_fonts));
+ 	loaded_fonts[i].name = MwStrdup(result);
+ 	fs = XLoadQueryFont(dpy, result);
+ 	if (fs == NULL) {

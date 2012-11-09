@@ -1,0 +1,10 @@
+--- ./Mowitz/MwXutils.c.overflow3	2003-08-22 23:16:48.000000000 +0000
++++ ./Mowitz/MwXutils.c	2011-01-03 07:30:36.000000000 +0000
+@@ -282,7 +282,6 @@
+ 	nquery++;
+ 	query_cache = MwRealloc(query_cache, nquery * sizeof *query_cache);
+ 	query_cache[i] = *color;
+-	nquery++;
+ }
+ 
+ 

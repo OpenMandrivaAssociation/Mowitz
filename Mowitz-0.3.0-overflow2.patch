@@ -1,0 +1,11 @@
+--- Mowitz/MwFilesel.c~	2003-01-16 21:31:13.000000000 +0100
++++ Mowitz/MwFilesel.c	2007-08-26 09:59:58.000000000 +0200
+@@ -690,7 +690,7 @@
+ 	String string;
+ 	XtAppContext app_context = XtWidgetToApplicationContext(pw);
+ 	int i;
+-	char newpath[1024];
++	char newpath[PATH_MAX];
+ 
+ 	if (!realpath(path, newpath))
+ 		getcwd(newpath, sizeof newpath);
