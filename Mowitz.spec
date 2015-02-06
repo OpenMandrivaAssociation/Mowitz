@@ -5,7 +5,7 @@
 Summary:	Collection of widgets for X applications
 Name:		Mowitz
 Version:	0.3.0
-Release:	12
+Release:	13
 License:	GPL
 Group:		System/Libraries
 URL:		http://siag.nu/mowitz/
