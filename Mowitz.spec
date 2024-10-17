@@ -8,7 +8,7 @@ Version:	0.3.0
 Release:	13
 License:	GPL
 Group:		System/Libraries
-URL:		http://siag.nu/mowitz/
+URL:		https://siag.nu/mowitz/
 Source:		http://siag.nu/pub/mowitz/%{name}-%{version}.tar.bz2
 Patch0:		Mowitz-0.3.0-overflow.patch
 Patch1:		Mowitz-0.3.0-overflow2.patch
