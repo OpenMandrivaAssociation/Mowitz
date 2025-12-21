@@ -19,6 +19,11 @@ Patch5:		Mowitz-0.3.0-overflow6.patch
 Patch6:		Mowitz-0.3.0-overflow7.patch
 Patch7:		Mowitz-0.3.0-overflow8.patch
 Patch8:		Mowitz-0.3.0-link.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(xpm)
 BuildRequires:	pkgconfig(xext)
